@@ -1,0 +1,57 @@
+# BoneGAN Configuration
+
+# Global seed for reproducibility
+seed: 42
+
+# STFT and Spectrogram Representation
+stft:
+  sr: 16000
+  window: "hann"
+  nfft: 256
+  noverlap: 192  # 75% overlap of nfft (hop size = 64)
+  reps_horizontal: 8
+  reps_vertical: 2
+  slice_time_frames: 32
+
+# Model architecture dimensions
+model:
+  img_height: 256
+  img_width: 256
+  input_channels: 3
+  output_channels: 3
+
+# Loss hyperparameters
+loss:
+  lambda_l1: 100.0  # Weight for L1 reconstruction loss (LAMBDA)
+
+# Optimizer hyperparameters
+optimizer:
+  generator_lr: 0.0002
+  discriminator_lr: 0.0002
+  beta_1: 0.5
+  beta_2: 0.999
+
+# Dataset paths and split ratios (Leakage-safe split by recording/speaker)
+data:
+  clean_folder: "data/clean"
+  noise_folder: "data/noisy"
+  splits_dir: "splits"
+  train_ratio: 0.70
+  val_ratio: 0.15
+  test_ratio: 0.15
+  split_by: "recording"  # 'recording' or 'speaker'
+
+# Training configuration
+training:
+  epochs: 100
+  batch_size: 1
+  buffer_size: 400
+  checkpoint_dir: "training_checkpoints"
+  checkpoint_prefix: "ckpt"
+  log_dir: "logs"
+  save_every_epochs: 5
+
+# Evaluation configuration
+evaluation:
+  results_dir: "results"
+  metrics_file: "results/metrics.json"
