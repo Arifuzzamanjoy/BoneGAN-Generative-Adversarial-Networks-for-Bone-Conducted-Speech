@@ -1,0 +1,39 @@
+# Environments
+.venv/
+venv/
+env/
+ENV/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+
+# Audio data (private dataset)
+*.wav
+*.mp3
+*.flac
+*.ogg
+data/
+datasets/
+
+# Model checkpoints
+training_checkpoints/
+checkpoints/
+checkpoint
+*.ckpt*
+*.weights.h5
+
+# Logs & TensorBoard
+logs/
+fit/
+
+# Evaluation outputs and results
+results/
+
+# Jupyter & Editor files
+.ipynb_checkpoints/
+.vscode/
+.idea/
+.DS_Store

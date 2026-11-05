@@ -1,0 +1,13 @@
+# Pinned dependencies for BoneGAN
+tensorflow==2.18.1
+numpy==2.0.2
+scipy==1.17.1
+librosa==0.11.0
+soundfile==0.14.0
+natsort==8.4.0
+pyyaml==6.0.3
+pesq==0.0.4
+pystoi==0.4.1
+pytest==9.2.0
+matplotlib==3.11.2
+tensorboard==2.18.0
