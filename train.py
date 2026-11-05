@@ -241,3 +241,4 @@ if __name__ == "__main__":
         checkpoint_dir=args.checkpoint_dir,
         seed=args.seed,
     )
+

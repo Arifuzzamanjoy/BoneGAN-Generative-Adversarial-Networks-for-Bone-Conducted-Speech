@@ -157,3 +157,4 @@ def Discriminator(
     )(zero_pad2)  # (batch_size, 30, 30, 1)
 
     return tf.keras.Model(inputs=[inp, tar], outputs=last, name="Discriminator")
+
